@@ -35,7 +35,7 @@ const title = [
   },
   {
     name: "Updates",
-    index: "",
+    index: "0",
     icon:<AiOutlineClockCircle/>
   },
   {
@@ -50,22 +50,22 @@ const title = [
   },
   {
     name: "Ecommerce",
-    index: "",
+    index: "0",
     icon:<AiFillTag/>
   },
   {
     name: "Cryptocurrency",
-    index: "",
+    index: "0",
     icon:<AiOutlineCreditCard/>
   },
   {
     name: "Projects",
-    index: "",
+    index: "0",
     icon:<RiPhoneLockFill/>
   },
   {
     name: "NFT Marketplace",
-    index: "",
+    index: "0",
     icon:<MdImageSearch/>
   },
   {
@@ -78,20 +78,20 @@ const title = [
 export default function DashboardSection() {
   return (
     <>
-      <div className="flex justify-between p-8 pb-0">
+      <div className="flex justify-between py-8 pb-0">
         <h2 className="text-gray-400 text-xs font-bold">DASHBOARDS</h2>
         <h1 className="text-blue-500"><HiOutlineChevronUp/></h1>
       </div>
-      <div className="p-8 pt-3 pb-3 md:visible invisible">
-        {title.map((item) => {
+      <div className="py-8 pt-3 pb-3">
+        {title.map((item,key) => {
           return (
             <>
-              <div className="flex justify-between my-3">
+              <div key={key} className="flex justify-between my-3">
                 <div className="flex items-center">
-                  <h1 className="mr-4 text-2xl text-blue-500">{item.icon}</h1>
-                  <h2 className="text-black font-semibold text-sm ">{item.name}</h2>
+                  <h1 className="mr-4 text-xl text-blue-500">{item.icon}</h1>
+                  <h2 className="text-black font-semibold text-xs ">{item.name}</h2>
                 </div>
-                <h1 className="bg-blue-100 text-blue-500 text-sm font-bold rounded-full px-2">
+                <h1 className="bg-blue-100 text-blue-500 text-xs font-bold rounded-full px-2">
                   {item.index}
                 </h1>
               </div>
