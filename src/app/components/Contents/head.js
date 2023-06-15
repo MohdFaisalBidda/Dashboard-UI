@@ -10,9 +10,9 @@ import { IoMdAddCircleOutline } from "react-icons/io";
 export default function head() {
   return (
     <div className="xl:flex-row flex flex-col md:justify-between items-center mt-5 xl:top-0 top-8  relative">
-      <div className="flex items-center px-6 pt-4 pb-3">
-        <h1 className="xl:text-2xl text-3xl font-semibold">Tasks Boards</h1>
-        <div className="xl:ml-10 ml-5 xl:text-2xl text-xl  text-gray-400">
+      <div className="flex items-center px-10 gap-[24px] xl:pt-4 pb-3">
+        <h1 className="xl:text-3xl text-3xl font-semibold">Tasks Boards</h1>
+        <div className="text-xl  text-gray-300">
           {<MdEdit />}
         </div>
       </div>
@@ -28,7 +28,7 @@ export default function head() {
           <li className=" mx-2">More</li>
         </ul>
       </div>
-      <div className="relative flex mr-20 xl:mx-28 justify-center items-center xl:my-0 my-2 ">
+      <div className="relative flex mr-20 xl:mx-28 justify-center items-center xl:my-0 my-4">
         <Image  alt="avatar1"
           className=" object-cover rounded-full w-10 h-10  border-white border-2 mr-14"
           src={avatar1}

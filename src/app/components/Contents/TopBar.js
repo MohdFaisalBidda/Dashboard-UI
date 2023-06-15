@@ -9,33 +9,38 @@ import { AiOutlineBell, AiOutlineSearch } from "react-icons/ai";
 import profile from "../../../../public/nancy.webp";
 import Image from "next/image";
 
-export default function TopBar({modal,setModal}) {
+export default function TopBar({ modal, setModal }) {
   return (
     <>
-      <div className={`${modal?"w-full pb-0 xl:border-r border-[#E9EBF0] max-w-full hidden":""}`}>
+      <div
+        className={`${
+          modal
+            ? "w-full pb-0 xl:border-r border-[#E9EBF0] max-w-full hidden"
+            : ""
+        }`}
+      >
         <div className="hidden xl:block h-[89px] p-6">
           <div className="flex justify-between items-center">
-            <div className=" flex items-center">
-              <div className="relative">
-                <AiOutlineSearch className="absolute ml-2 text-gray-400 top-4 text-xl" />
-                <input
-                  placeholder="Search Tasks"
-                  className="bg-white border border-gray-200 p-4 font-semibold rounded-lg text-xs min-w-[200px] placeholder:px-4"
-                />
-                <BiExit className="absolute right-3 text-gray-400 top-4 text-xl" />
+            <div className="flex items-center gap-[32px]">
+              <div className="flex min-w-[200px] justify-between rounded-md border-[1px] border-[#EBEEF2] bg-white p-[12px] drop-shadow-sm">
+                <div className="flex items-center gap-3">
+                  <AiOutlineSearch className=" text-gray-300 text-lg" />
+                  <p className="cursor-pointer text-[12px] font-semibold text-[#98A2B2]">
+                    Search Here
+                  </p>
+                </div>
+                <BiExit className=" text-gray-300 text-xl" />
               </div>
-              <div className="ml-10 text-gray-400 text-lg">
-                {<TbMicrophone />}
-              </div>
+              <TbMicrophone className="text-gray-400" />
             </div>
-            <div className="flex">
-              <ul className="flex text-xs font-semibold text-gray-400">
-                <li className="font-bold mx-4 text-black">Dashboard</li>
-                <li className=" mx-4">My Tasks</li>
-                <li className=" mx-4">My Tasks</li>
-                <li className=" mx-4">Reporting</li>
-                <li className=" mx-4">Portfolios</li>
-                <li className=" mx-4">Goals</li>
+            <div className="flex ">
+              <ul className="flex text-xs font-semibold text-gray-400 gap-6">
+                <li className="font-bold text-black">Dashboard</li>
+                <li className="">My Tasks</li>
+                <li className="">My Tasks</li>
+                <li className="">Reporting</li>
+                <li className="">Portfolios</li>
+                <li className="">Goals</li>
               </ul>
             </div>
             <div className="flex justify-center items-center gap-2">
@@ -49,7 +54,8 @@ export default function TopBar({modal,setModal}) {
                 <p className="absolute right-0 text-xs font-semibold bg-red-500 text-white rounded-full h-5 w-5 flex justify-center items-center">
                   4
                 </p>
-                <Image  alt="profile"
+                <Image
+                  alt="profile"
                   className=" object-cover rounded-full w-10 h-10  border-blue-500 border-2 p-1"
                   src={profile}
                 />

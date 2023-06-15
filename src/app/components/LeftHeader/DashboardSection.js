@@ -1,36 +1,26 @@
 import React from "react";
 import {HiOutlineChevronUp} from "react-icons/hi"
-import {BiSolidAnalyse,BiSolidCreditCard} from "react-icons/bi"
 import {RxDashboard} from "react-icons/rx"
 import {RiPhoneLockFill} from "react-icons/ri"
 import {LuSettings2} from "react-icons/lu"
 import {IoMdAnalytics} from "react-icons/io"
 import {AiFillTag, AiOutlineAppstoreAdd, AiOutlineClockCircle, AiOutlineCreditCard} from "react-icons/ai"
 import { MdImageSearch, MdInbox, MdOutlineDriveFolderUpload } from "react-icons/md";
-{/* 
 
-
-
-
-
-
-
-
-*/}
 const title = [
   {
     name: "Inbox",
-    index: 4,
+    index: "4",
     icon:<MdInbox/>
   },
   {
     name: "Drive Files",
-    index: 435,
+    index: "435",
     icon:<MdOutlineDriveFolderUpload/>
   },
   {
     name: "Boards",
-    index: 5,
+    index: "5",
     icon:<AiOutlineAppstoreAdd/>
   },
   {
@@ -40,12 +30,12 @@ const title = [
   },
   {
     name: "Analytics",
-    index: 2,
+    index: "2",
     icon:<IoMdAnalytics/>
   },
   {
     name: "CRM Dashboard",
-    index: 2,
+    index: "2",
     icon:<RxDashboard/>
   },
   {
@@ -70,7 +60,7 @@ const title = [
   },
   {
     name: "Settings",
-    index: 2,
+    index: "2",
     icon:<LuSettings2/> 
   },
 ];
@@ -78,15 +68,16 @@ const title = [
 export default function DashboardSection() {
   return (
     <>
-      <div className="flex justify-between py-8 pb-0">
+    <hr />
+      <div className="flex justify-between mt-8 mb-4 ">
         <h2 className="text-gray-400 text-xs font-bold">DASHBOARDS</h2>
         <h1 className="text-blue-500"><HiOutlineChevronUp/></h1>
       </div>
-      <div className="py-8 pt-3 pb-3">
+      <div className="">
         {title.map((item,key) => {
           return (
             <>
-              <div key={key} className="flex justify-between my-3">
+              <div key={key} className="flex justify-between my-5">
                 <div className="flex items-center">
                   <h1 className="mr-4 text-xl text-blue-500">{item.icon}</h1>
                   <h2 className="text-black font-semibold text-xs ">{item.name}</h2>

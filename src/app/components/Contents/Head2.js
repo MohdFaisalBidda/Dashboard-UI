@@ -3,57 +3,66 @@ import {
   AiOutlineAppstore,
   AiFillLock,
   AiOutlineFile,
-  AiOutlineAppstoreAdd,
   AiOutlineSearch,
+  AiOutlineTwitter,
 } from "react-icons/ai";
 import { BiExit } from "react-icons/bi";
-import { FaGripLines } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineStackedLineChart } from "react-icons/md";
 import { MdOutlineStrikethroughS } from "react-icons/md";
 import { TbChartDots3 } from "react-icons/tb";
 
 export default function Head2() {
   return (
-    <div className="flex justify-between xl:flex-row flex-col gap-y-4 xl:mt-8 mt-20 mx-8">
-      <div className="flex justify-center w-auto max-w-[25rem] mx-auto xl:mr-0 xl:ml-0 items-center p-1 bg-white border border-gray-200  rounded-lg text-sm font-semibold text-gray-500">
-        <div className="flex justify-center items-center border-r px-4 border-gray-200 text-xs">
-          <AiOutlineAppstore className="text-2xl mr-2" /> Board View
+    <div className="flex flex-col items-center justify-between gap-3 px-[16px] pt-[28px] md:px-[36px] xl:flex-row mt-4 xl:mt-0">
+      <div className="flex w-full flex-wrap items-center justify-between gap-2 xl:w-auto xl:gap-4">
+        <div className="grid grid-cols-2 gap-2 rounded-lg bg-white drop-shadow-sm">
+          <div className="flex cursor-pointer items-center gap-2 rounded-l-lg border-r-[1px] border-[#EBEEF2] bg-[#FAFBFC] p-[8px] text-[12px] font-semibold text-[#606C80]">
+            <AiOutlineAppstore className="text-lg mr-2 text-gray-300" /> Board
+            View
+          </div>
+          <div className="flex cursor-pointer items-center gap-2 p-[8px] text-[12px] font-semibold text-[#606C80]">
+            <GiHamburgerMenu className="text-lg mr-2 text-gray-300" /> List View
+          </div>
         </div>
-        <div className="flex justify-center items-center px-6 text-xs">
-          <FaGripLines className="text-2xl mr-2" /> List View
+        <div className="hidden h-8 w-[1px] bg-[#EBEEF2] xl:block"></div>
+        <div className="flex cursor-pointer items-center gap-2">
+          <div className="flex justify-between items-center ">
+            <h1 className="flex items-center justify-center text-[12px] font-semibold text-gray-400">
+              <AiFillLock className="text-lg mr-2 text-gray-400" /> Limited
+              Access
+            </h1>
+          </div>
+        </div>
+        <div className="hidden h-8 w-[1px] bg-[#EBEEF2] xl:block"></div>
+        <div className="flex items-center gap-3">
+          <p className="cursor-pointer text-[12px] font-semibold text-[#98A2B2]">
+            Owners
+          </p>
+          <AiOutlineTwitter className="text-xs  text-blue-500" />
+          <p className="cursor-pointer text-[12px] font-semibold text-[#98A2B2]">
+            Twitter team
+          </p>
         </div>
       </div>
-      <div className="flex xl:flex-row flex-col xl:items-center items-start text-gray-400 text-xs font-semibold">
-        <div className="flex justify-between items-center ">
-          <h1 className="flex items-center justify-center px-6">
-            <AiFillLock className="text-2xl mr-2" /> Limited Access
-          </h1>
-          <h1 className="px-6">Owners</h1>
-          <h1 className="px-6">Twitter team</h1>
-        </div>
-        <div className="px-6 xl:max-w-xs gap-3 xl:mx-0 mx-auto  flex xl:flex-row xl:mt-0 mt-4 relative">
-          <AiOutlineSearch className="absolute ml-2 text-gray-400 top-4 text-xl" />
-          <input
-            placeholder="Search Tasks"
-            className="bg-white border border-gray-200 p-4 font-semibold rounded-lg text-xs min-w-[200px] placeholder:px-4"
-          />
-          <BiExit className="absolute right-8 text-gray-400 top-4 text-xl" />
-        </div>
+      <div className="flex w-full max-w-[300px] items-center gap-3 self-start rounded-md border-[1px] border-[#EBEEF2] bg-white py-[8px] pl-[8px] pr-8 xl:w-auto">
+        <AiOutlineSearch className="text-gray-400" />
+       <p className="text-[12px] font-semibold text-[#98A2B2]">Search Here</p>
       </div>
-      <div className="flex xl:justify-end justify-center xl:ml-auto items-center gap-2">
-        <div className="p-2 rounded-lg bg-white">
+      <div className="flex gap-2 self-start">
+        <div className="rounded-lg bg-white p-2 drop-shadow-sm">
           <AiOutlineFile className="text-gray-400" />
         </div>
-        <div className="p-2 rounded-lg bg-white">
+        <div className="rounded-lg bg-white p-2 drop-shadow-sm">
           <MdOutlineStackedLineChart className=" text-gray-400" />
         </div>
-        <div className="p-2 rounded-lg bg-white">
+        <div className="rounded-lg bg-white p-2 drop-shadow-sm">
           <MdOutlineStrikethroughS className=" text-gray-400" />
         </div>
-        <div className="p-2 rounded-lg bg-white">
+        <div className="rounded-lg bg-white p-2 drop-shadow-sm">
           <TbChartDots3 className=" text-gray-400" />
         </div>
-        <div className="p-2 rounded-lg bg-white">
+        <div className="rounded-lg bg-white p-2 drop-shadow-sm">
           <AiOutlineAppstore className=" text-gray-400" />
         </div>
       </div>
